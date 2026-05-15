@@ -36,7 +36,7 @@ Proyecto1_Manosalvas/
 
 ---
 
-## 🐳 Instrucciones de Uso con Docker
+## Instrucciones de Uso con Docker
 
 ### 1. Construir la imagen localmente
 
@@ -72,7 +72,7 @@ http://192.168.100.69:8080
 
 ---
 
-## 🐋 Imagen en Docker Hub
+## Imagen en Docker Hub
 
 La imagen está publicada y disponible para despliegue inmediato:
 
@@ -96,7 +96,7 @@ Luego accede en tu navegador a: **http://localhost:8080**
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 | Tecnología | Uso |
 |---|---|
@@ -107,7 +107,7 @@ Luego accede en tu navegador a: **http://localhost:8080**
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Gabriel Alexander Manosalvas Clavijo**  
 Estudiante de Ingeniería de Software — ESPE  
