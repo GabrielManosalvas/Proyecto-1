@@ -1,0 +1,338 @@
+/* ==========================================================================
+   Variables (Paleta 1: Trust & Code) y Tipografía
+   ========================================================================== */
+:root {
+    --primary-color: #0F172A;
+    --secondary-color: #1E293B;
+    --accent-color: #38BDF8;
+    --bg-color: #F8FAFC;
+    --text-main: #334155;
+    --white: #FFFFFF;
+    
+    --font-headers: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   Reseteo y Estilos Base
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-headers); color: var(--primary-color); }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section { padding: 80px 0; }
+.bg-white { background-color: var(--white); border-radius: 12px; }
+
+/* ==========================================================================
+   Header y Navegación
+   ========================================================================== */
+.site-header {
+    background-color: var(--primary-color); /* Fondo oscuro para el header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: var(--font-headers);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.logo span { color: var(--accent-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover { color: var(--accent-color); }
+
+/* Menú Hamburguesa Oculto en Escritorio */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Sección Hero
+   ========================================================================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero > .hero-content > h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #cbd5e1;
+}
+
+.hero .email {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: var(--font-headers);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   Componentes Globales y Grillas
+   ========================================================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.divider {
+    height: 4px;
+    width: 60px;
+    background-color: var(--accent-color);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.profile-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   Tarjetas Académicas y Proyectos
+   ========================================================================== */
+.academic-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.academic-card h3 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 10px;
+}
+
+.item, .language-item {
+    margin-bottom: 15px;
+}
+
+.item h4 {
+    font-size: 1.05rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.item p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.project-card {
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   Habilidades (Skills Tags)
+   ========================================================================== */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skills-tags span {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    cursor: default; /* Indica al usuario que es un elemento visual */
+    transition: all 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Efecto hover: Cambia el color, el borde y añade una ligera sombra/elevación */
+.skills-tags span:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(56, 189, 248, 0.2);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.social-links { margin-bottom: 20px; }
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover { color: var(--accent-color); }
+
+/* ==========================================================================
+   Media Queries (Responsive Design para Móviles)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Ajustes Tipográficos */
+    .hero > .hero-content > h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.2rem; }
+    
+    /* Configuración de Grilla a 1 sola columna */
+    .academic-grid { grid-template-columns: 1fr; }
+
+    /* Lógica Visual del Menú Hamburguesa */
+    .menu-toggle { display: flex; } /* Muestra el botón */
+    
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Altura del navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active { max-height: 300px; } /* Despliega el menú */
+    
+    .nav-links li { width: 100%; text-align: center; }
+    
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Animación de las barras formando una "X" */
+    .menu-toggle.open .bar:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.open .bar:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+}
