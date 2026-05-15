@@ -64,12 +64,6 @@ Abre tu navegador y dirígete a:
 http://localhost:8080
 ```
 
-Para acceso desde red local (móvil):
-
-```
-http://192.168.100.69:8080
-```
-
 ---
 
 ## Imagen en Docker Hub
